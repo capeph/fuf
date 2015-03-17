@@ -1,0 +1,14 @@
+#import <iostream>
+#import "tokenizer.h"
+
+using namespace std;
+
+
+string Tokenizer::next() {
+        return "hello";
+}
+
+string Tokenizer::consume() {
+}
+
+    

@@ -1,0 +1,6 @@
+#define CATCH_CONFIG_MAIN
+#import "catch.hpp"
+
+TEST_CASE("test test") {
+    REQUIRE( 2 == 2 );
+}
