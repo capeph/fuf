@@ -1,0 +1,52 @@
+Simple expressions:
+A simple declaration will associate a name to a value or an expression
+	name = value
+Declarations are not evaluated in the order they are entered. The evaluation order depends on the values that are needed. In other words 'lazy evaluation'.
+It is possible to use forward referencing in declarations to access expressions not yet described. Any expression using a forward reference is flagged during compilation or interpretation to highlight that the value is not yet defined. This does not constitute an error.
+	name1 = name2    # will give a warning that name2 is not declared yet
+	name2 = value
+
+To evaluate the expression or receive the value of an expression just entering the name is enough
+	name
+
+Comments:
+Anything that follows a # on a line is seen as a comment
+	name = value   # this is a comment
+
+Objects:
+Several declarations can be bundled together in an object. The different declarations are sid to be attributes of the object. Defining an object is similar to a normal declaration, with a name and a value. The difference is that the value is now a list of declarations:
+Simple object declaration:
+	object = {
+			attribute1 = value1
+			attribute2 = value2
+			}
+
+Accessing attributes in objects:
+To get the value of an attribute the name of the attribute follows the object
+Accessing an attribute:
+	object attribute1   # returns value1 given the declaration above
+
+
+
+
+
+
+
+
+
+Objects:
+
+Objects consists of a series of declarations.
+Declarations have no individual order
+Declarations all have an identity.
+An identity can only be used once in each object - redefinitions are not allowed
+There can be one declaration without identity in an object
+The value is returned when an identifier is used
+An identifier can be a name or a pattern of names and arguments
+The value of the unidentified declaration is returned if no other pattern is provided
+Objects are based on other objects, using them as prototypes
+Values and metods of the prototype can be replaced
+attributes can be hidden or exposed
+
+
+method vs function application?

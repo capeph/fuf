@@ -1,0 +1,14 @@
+#import "token.h"
+
+Token::Token(TokenType type, string label) {
+	this->type = type;
+	this->name = label;
+}
+
+TokenType Token::get_type() {
+	return type;
+}
+
+string Token::get_name() {
+	return name;
+}	

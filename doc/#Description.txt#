@@ -1,0 +1,12 @@
+Objects:
+
+Objects consists of a series of declarations.
+Declarations have no individual order
+Declarations all have an identity.
+An identity can only be used once in each object - redefinitions are not allowed
+There can be one declaration without identity in an object
+The value is returned when an identifier is used
+An identifier can be a name or a pattern of names and arguments
+The value of the unidentified declaration is returned if no other pattern is provided
+Objects are based on other objects, using them as prototypes
+Values and metods of the prototype can be replaced

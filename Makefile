@@ -1,7 +1,7 @@
 # Makefile
 
 CC:=g++
-CFLAGS:=
+CFLAGS:=-std=c++11
 
 ODIR=obj
 TARGET=fuf
@@ -16,7 +16,7 @@ TEST_ALL_S:=$(call allmatching,test,*.cpp)
 TEST_ALL_O:=$(TEST_ALL_S:.cpp=.o)
 
 silly:
-	echo $(APP_LOGIC_S)
+	@echo "Choose target among clean|app|tests|test|all"
 
 .cpp.o:
 	$(CC) $(CFLAGS) -c $< -o $@ -Isrc
@@ -25,7 +25,7 @@ clean:
 	@rm -fv $(APP_MAIN_O) $(APP_LOGIC_O) $(TEST_ALL_O) $(TARGET) $(TEST_TARGET)
 
 app: $(APP_LOGIC_O) $(APP_MAIN_O)  
-	$(CC) $^ -o $(TARGET)
+	$(CC) $(CFLAGS) $^ -o $(TARGET)
 
 tests: $(APP_LOGIC_O) $(TEST_ALL_O)
 	$(CC) $(CFLAGS) $^ -o $(TEST_TARGET)
@@ -34,3 +34,4 @@ test: tests
 	./$(TEST_TARGET)
 
 all: app test
+
